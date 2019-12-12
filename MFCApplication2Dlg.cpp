@@ -248,7 +248,7 @@ UINT       CMFCApplication2Dlg::say(LPVOID   pP) {
 			::GetCursorPos(&p);
 			::SetCursorPos(343 + r1.left, 473 + r1.top);
 
-
+    
 			::PostMessage(game, WM_KEYDOWN, VK_RETURN, 0);
 			::PostMessage(game, WM_KEYUP, VK_RETURN, 0);
 			
