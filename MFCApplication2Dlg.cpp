@@ -170,7 +170,7 @@ void CMFCApplication2Dlg::OnBnClickedOk()
  
 	//pThread = ::AfxBeginThread(say, NULL); //接下来做啥就直接调用pThead就行.
 
-	mythread = AfxBeginThread(
+	mythread = AfxBeginThread(  //定义say的时候必须是static类型
 		say,
 		NULL,
 		THREAD_PRIORITY_NORMAL,
@@ -235,7 +235,7 @@ UINT       CMFCApplication2Dlg::say(LPVOID   pP) {
 		x += msg3;
 
 
-		if (mm == 5) {
+		if (mm ==1) {
 			//if (s == 0) {
 					//a = false;
 					//MessageBox(strFull);
@@ -248,8 +248,10 @@ UINT       CMFCApplication2Dlg::say(LPVOID   pP) {
 			::GetCursorPos(&p);
 			::SetCursorPos(343 + r1.left, 473 + r1.top);
 
-			mouse_event(MOUSEEVENTF_LEFTDOWN, 0, 0, 0, 0);
-			mouse_event(MOUSEEVENTF_LEFTUP, 0, 0, 0, 0);
+
+			::PostMessage(game, WM_KEYDOWN, VK_RETURN, 0);
+			::PostMessage(game, WM_KEYUP, VK_RETURN, 0);
+			
 
 			Sleep(90000);
 		}
