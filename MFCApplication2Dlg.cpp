@@ -7,7 +7,7 @@
 #include "MFCApplication2.h"
 #include "MFCApplication2Dlg.h"
 #include "afxdialogex.h"
-#include <string> 
+#include <string>               //--------------------------------------------------
 #ifdef _DEBUG
 #define new DEBUG_NEW
 #endif
@@ -154,7 +154,7 @@ HCURSOR CMFCApplication2Dlg::OnQueryDragIcon()
 	return static_cast<HCURSOR>(m_hIcon);
 }
 
-
+//--------------------------------------------------
 HWND game;  //游戏窗口句柄
 RECT  r1;
 POINT p;
@@ -257,4 +257,4 @@ UINT       CMFCApplication2Dlg::say(LPVOID   pP) {
 		}
 	}
 	return 0;
-}
+}//--------------------------------------------------
