@@ -33,5 +33,5 @@ protected:
 	DECLARE_MESSAGE_MAP()
 public:
 	afx_msg void OnBnClickedOk();
-	static UINT say(LPVOID   pP);
+	static UINT say(LPVOID   pP);   //--------------------------------------
 };
